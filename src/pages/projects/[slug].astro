@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import SiteLayout from '../../layouts/SiteLayout.astro';
+import { ArrowLeft, Github } from 'lucide-react';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -18,8 +19,8 @@ const project = entry.data;
 <SiteLayout
   title={`${project.title} | Prom Sereyreaksa`}
   description={project.summary}
-  canonical={`https://promsereyreaksa.dev/projects/${project.slug}`}
-  currentPath="/projects"
+  canonical={`https://promsereyreaksa.dev/projects/${project.slug}/`}
+  currentPath="/projects/"
 >
   <section class="page-header shell">
     <div data-reveal>
@@ -27,6 +28,10 @@ const project = entry.data;
       <h1 class="page-title">{project.title}</h1>
       <p class="article-lead">{project.summary}</p>
       <div class="inline-links">
+        <a class="button" href="/projects/">
+          <ArrowLeft size={16} aria-hidden="true" />
+          Back to projects
+        </a>
         {project.link ? (
           <a class="button button--primary" href={project.link} target="_blank" rel="noreferrer">
             Live Demo
@@ -34,6 +39,7 @@ const project = entry.data;
         ) : null}
         {project.github ? (
           <a class="button" href={project.github} target="_blank" rel="noreferrer">
+            <Github size={16} aria-hidden="true" />
             GitHub
           </a>
         ) : null}

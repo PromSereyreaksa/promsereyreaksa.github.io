@@ -1,5 +1,5 @@
 ---
-order: 2
+order: 5
 slug: phsar-design
 title: Phsar Design
 summary: Creative freelancing platform connecting local digital artists with clients.
@@ -19,33 +19,21 @@ link: https://phsardesign.vercel.app/
 
 ## Overview
 
-Phsar Design is a creative marketplace focused on helping local designers present their work and connect with clients in a more structured way.
+Phsar Design is a creative marketplace for local designers to present work and reach clients.
 
 ## Problem
 
-Independent creatives often rely on scattered social platforms that are good for visibility but weak for discovery, trust, and service presentation.
+Independent creatives often rely on social platforms that help with visibility but not with discovery or trust.
 
-## Research
+## Approach
 
-The product direction focused on how creatives present themselves, how clients compare work, and where marketplace flows usually break:
+I focused on the parts of a marketplace that usually break first:
 
 - unclear profiles
 - weak service framing
 - inconsistent browsing experience
 - too much friction before first contact
 
-## Architecture
+## Result
 
-The frontend was designed around reusable marketplace views, predictable state management, and a simple browsing flow that could scale with more content and categories.
-
-## Implementation
-
-I worked on frontend architecture and user-facing flows, including listing structure, navigation, and the interface patterns needed for a marketplace experience.
-
-## Challenges
-
-Marketplace products become messy quickly if the hierarchy is weak. A lot of the work was about keeping browsing and discovery simple while the product surface grew.
-
-## Lessons Learned
-
-Creative platforms work best when the interface gets out of the way and lets the work speak clearly.
+The frontend gives the marketplace a clearer path from browsing to contact without burying the work under extra UI.

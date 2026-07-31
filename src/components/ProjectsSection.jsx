@@ -91,6 +91,18 @@ const ProjectsSection = memo(({ section, projects }) => {
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   ) : null}
+
+                  {activeProject.github ? (
+                    <a
+                      href={activeProject.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="projects-secondary-cta"
+                    >
+                      <Github className="w-4 h-4" />
+                      <span>GitHub</span>
+                    </a>
+                  ) : null}
                 </div>
               </div>
 

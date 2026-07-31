@@ -1,5 +1,5 @@
 ---
-order: 1.5
+order: 1
 slug: broryat
 title: Broryat
 summary: Public-facing website for a Telegram-based anti-scam bot built for Cambodian users.
@@ -19,32 +19,20 @@ link: https://broryat.tech/
 
 ## Overview
 
-Broryat is the public website for a Telegram-based anti-scam bot. My role was focused on the site itself: shaping the information architecture, building the Astro frontend, and making the product understandable for everyday users.
+Broryat is the public website for a Telegram anti-scam bot. I focused on making the product easy to understand for non-technical users.
 
 ## Problem
 
-Security products often explain themselves in technical language. That creates a gap for people who most need the tool, especially when the real user question is simple: "Should I trust this message, link, or file?"
+Security tools usually explain themselves in technical language. For this product, the real question was simpler: should a user trust this message, link, or file?
 
-## Research
+## Approach
 
-The content and structure were shaped around three needs:
+I shaped the site around three requirements:
 
 - explain suspicious content in plain language
 - make the product feel trustworthy without visual noise
 - support both Khmer and English readers clearly
 
-## Architecture
+## Result
 
-The site was built in Astro with a content-led structure, lightweight components, and static delivery. That kept performance strong and the editing model simple.
-
-## Implementation
-
-I built the frontend, structured the bilingual pages, and designed the section flow around quick comprehension. The emphasis was on clear hierarchy, concise copy, and immediate calls to action that lead users to the bot.
-
-## Challenges
-
-The hardest part was tone. The site needed to communicate urgency around online scams without becoming alarmist or visually chaotic.
-
-## Lessons Learned
-
-Trust on the web is often built through restraint. Clear language, predictable layout, and fast pages can do more than decorative security branding.
+The final site gives the bot a clearer voice, a cleaner structure, and a faster path from curiosity to action.

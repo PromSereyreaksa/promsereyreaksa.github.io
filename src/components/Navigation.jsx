@@ -12,11 +12,11 @@ const SECTION_LINKS = [
 
 const ROOT_SECTION_URLS = {
   landing: '/',
-  about: '/about',
-  experience: '/about#experience',
-  projects: '/projects',
-  'visual-work': '/visual-work',
-  contact: '/contact',
+  about: '/about/',
+  experience: '/about/#experience',
+  projects: '/projects/',
+  'visual-work': '/visual-work/',
+  contact: '/contact/',
 };
 
 const normalizeBasePath = (basePath) => {
@@ -71,22 +71,22 @@ export default function Navigation({ basePath = '/', portfolioLinks = [] }) {
       return;
     }
 
-    if (currentPath === '/about') {
+    if (currentPath === '/about/') {
       setActiveItem('about');
       return;
     }
 
-    if (currentPath === '/projects') {
+    if (currentPath === '/projects/') {
       setActiveItem('projects');
       return;
     }
 
-    if (currentPath === '/visual-work') {
+    if (currentPath === '/visual-work/') {
       setActiveItem('visual-work');
       return;
     }
 
-    if (currentPath === '/contact') {
+    if (currentPath === '/contact/') {
       setActiveItem('contact');
       return;
     }

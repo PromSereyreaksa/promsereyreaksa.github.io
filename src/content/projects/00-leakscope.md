@@ -1,5 +1,5 @@
 ---
-order: 0
+order: 2
 slug: leakscope
 title: LeakScope
 summary: Automated external security scanner for modern web applications.
@@ -29,42 +29,28 @@ link: https://leakscope.tech
 
 ## Overview
 
-LeakScope is an external security scanner built around a simple idea: many important security issues are already visible from the public internet if you know where to look and how to connect the signals.
+LeakScope is an external security scanner that looks for exposed issues from the public internet without needing credentials.
 
 ## Problem
 
-Security reviews are often periodic, manual, and limited by time. Public assets, client bundles, exposed configuration, weak access control flows, and token handling issues can stay live for long periods because nobody is checking them continuously.
+Security reviews are often periodic and manual. Public assets, exposed configuration, and access-control mistakes can stay live for too long because nobody is checking them continuously.
 
-## Research
+## Approach
 
-I started by looking at recurring patterns in modern web applications:
+I focused on recurring signals in modern web apps:
 
 - leaked secrets in bundled assets
 - weak authorization around public endpoints
 - JWT handling mistakes
 - accidental exposure through configuration drift
 
-The goal was not to simulate an internal pentest. It was to inspect only what an external attacker could already see.
-
-## Architecture
-
-The system is split into a few focused stages:
+The scanner is split into a few focused stages:
 
 - collection of public assets and endpoints
 - normalization and fingerprinting of findings
 - rule-based analysis for auth and exposure issues
 - report generation with remediation context
 
-That separation made it easier to expand checks without turning the scanner into one large script.
+## Result
 
-## Implementation
-
-I built the scanning pipeline, finding model, and reporting layer. The implementation focused on throughput, noise reduction, and clear evidence for each issue so the output stayed useful to engineering teams.
-
-## Challenges
-
-The hardest part was not finding signals. It was keeping the results trustworthy. External scanning can create noisy output quickly, so I spent a lot of time tuning detection logic, validating edge cases, and reducing false positives.
-
-## Lessons Learned
-
-Security tools only help when the output is readable and actionable. Good detection matters, but clear prioritization and remediation context matter just as much.
+The output is a scanner that gives teams evidence, not just alerts, so findings are easier to act on.

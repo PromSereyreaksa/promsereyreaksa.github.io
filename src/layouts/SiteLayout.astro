@@ -11,9 +11,9 @@ const {
 } = Astro.props;
 
 const navItems = [
-  { href: '/projects', label: 'Projects' },
-  { href: '/experience', label: 'Experience' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/projects/', label: 'Projects' },
+  { href: '/experience/', label: 'Experience' },
+  { href: '/contact/', label: 'Contact' },
 ];
 
 const isActive = (href) => {
@@ -277,6 +277,7 @@ const isActive = (href) => {
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        gap: 0.45rem;
         min-height: 2.9rem;
         padding: 0 1rem;
         border: 1px solid var(--border);

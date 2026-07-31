@@ -1,5 +1,5 @@
 ---
-order: 4
+order: 7
 slug: automata-visualizer
 title: Automata Visualizer
 summary: Interactive educational app for automata theory and algorithm exploration.
@@ -17,28 +17,16 @@ link: https://automata-f6k9.onrender.com/
 
 ## Overview
 
-Automata Visualizer is an educational tool built to make abstract theory easier to inspect through interaction rather than static explanation.
+Automata Visualizer is an educational tool that makes automata theory easier to inspect interactively.
 
 ## Problem
 
-Automata theory is often taught through diagrams and formal notation alone. That makes it harder for learners to build intuition around state changes and algorithm flow.
+Automata theory is usually taught through diagrams and notation alone, which makes state changes harder to feel.
 
-## Research
+## Approach
 
-The work focused on how students understand transitions, inputs, and feedback when they can manipulate the system directly instead of only reading about it.
+The interface was designed around direct interaction with transitions, inputs, and feedback.
 
-## Architecture
+## Result
 
-The application was structured around clear state representation, deterministic transitions, and interactive views that map directly to the underlying theory.
-
-## Implementation
-
-I built the educational interface and the logic needed to let users step through automata behavior visually.
-
-## Challenges
-
-The challenge was translating theory into interaction without oversimplifying the model or making the interface harder than the material itself.
-
-## Lessons Learned
-
-For educational software, a good explanation is often a good interaction pattern.
+The tool turns abstract theory into something students can step through and understand visually.

@@ -5,6 +5,7 @@ import {
   SiNextdotjs, SiThreedotjs, SiVite, SiOpenjdk,
   SiRedux, SiSqlite, SiJsonwebtokens, SiVuedotjs,
   SiSupabase, SiRedis, SiSocketdotio, SiDjango, SiReactrouter,
+  SiFramer, SiSvelte, SiCss3, SiNpm,
 } from 'react-icons/si';
 
 const icons = {
@@ -12,6 +13,9 @@ const icons = {
   'React': { Icon: SiReact, color: '#61DAFB' },
   'JavaScript': { Icon: SiJavascript, color: '#F7DF1E' },
   'TypeScript': { Icon: SiTypescript, color: '#3178C6' },
+  'Svelte': { Icon: SiSvelte, color: '#FF3E00' },
+  'CSS': { Icon: SiCss3, color: '#1572B6' },
+  'npm': { Icon: SiNpm, color: '#CB3837' },
   'Node.js': { Icon: SiNodedotjs, color: '#5FA04E' },
   'Express': { Icon: SiExpress, color: '#000000' },
   'Express JS': { Icon: SiExpress, color: '#000000' },
@@ -35,6 +39,7 @@ const icons = {
   'WebSocket': { Icon: SiSocketdotio, color: '#010101' },
   'Django': { Icon: SiDjango, color: '#092E20' },
   'React Router': { Icon: SiReactrouter, color: '#CA4245' },
+  'Framer': { Icon: SiFramer, color: '#0055FF' },
 };
 
 export default function TechTags({ stack, max = 5 }) {

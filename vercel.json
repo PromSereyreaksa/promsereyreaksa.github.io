@@ -102,7 +102,7 @@
       "permanent": true
     }
   ],
-  "trailingSlash": false,
+  "trailingSlash": true,
   "buildCommand": "npm run build",
   "outputDirectory": "dist"
 }
