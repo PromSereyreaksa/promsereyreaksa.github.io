@@ -1,10 +1,8 @@
 ---
 import { loadPortfolioContent } from '../lib/portfolioContent.js';
 import SiteLayout from '../layouts/SiteLayout.astro';
-import StackGrid from '../components/StackGrid.jsx';
 import ContactIcon from '../components/ContactIcon.jsx';
 import TechTags from '../components/TechTags.jsx';
-import { Github } from 'lucide-react';
 import { Github } from 'lucide-react';
 
 const { siteData, projects, experience, education, contactMethods } = await loadPortfolioContent();
@@ -22,7 +20,11 @@ const remainingProjects = projects.slice(5);
     <div class="hero-block" data-reveal>
       <h1 class="hero-title">Prom Sereyreaksa</h1>
       <p class="hero-role">
-        <span>Indie Developer.</span>
+        <span>Founder of</span>
+        <a class="hero-company" href="https://motify.video" target="_blank" rel="noreferrer">
+          <img src="/projects/motify-icon.png" alt="" width="22" height="22" />
+          Motify
+        </a>
       </p>
       <p class="hero-copy">
         A developer based in Phnom Penh, Cambodia.
@@ -42,19 +44,19 @@ const remainingProjects = projects.slice(5);
       </div>
       <div class="about-copy" data-reveal>
         <p>
-          Prom Sereyreaksa is a Cambodian software engineering student and indie developer who
-          builds products around web development, cybersecurity, AI, and design systems. He focuses
-          on turning ideas into usable software and exploring entrepreneurship through technology.
+          Prom Sereyreaksa is a Cambodian software engineering student and the founder of Motify,
+          an AI video generator that turns a prompt into polished, on-brand motion graphics. He
+          works as a full-stack engineer across product, web, and AI.
         </p>
         <p>
-          He has worked with product teams including Anagata and builds independent software
+          He has worked with product teams including Anagata and has built independent software
           projects across web development, cybersecurity, AI, and design systems.
         </p>
         <p>
           "The first time I touched code, I was modding a game and changing how it worked. That
-          feeling of opening a system, understanding it, and making it do something new has stayed
-          with me. It is why I am drawn to cybersecurity, why I build security-focused projects,
-          and why I spend my free time learning offensive security."
+          feeling of opening a system and making it do something new has stayed with me. These
+          days I put it into building a startup: finding a real problem, talking to the people
+          who have it, and shipping a product good enough that they actually want to use it."
         </p>
       </div>
     </div>
@@ -165,17 +167,6 @@ const remainingProjects = projects.slice(5);
 
   <section class="section shell">
     <div class="section-head" data-reveal>
-      <p class="eyebrow">Tech Stack</p>
-    </div>
-    <div data-reveal>
-      <StackGrid stack={siteData.about.stack} />
-    </div>
-  </section>
-
-  <div class="shell divider"></div>
-
-  <section class="section shell">
-    <div class="section-head" data-reveal>
       <p class="eyebrow">Contact</p>
     </div>
     <div class="contact-strip" data-reveal>
@@ -212,6 +203,26 @@ const remainingProjects = projects.slice(5);
 
     .hero-role img {
       flex: 0 0 auto;
+    }
+
+    .hero-company {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text);
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-color: var(--text);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.22em;
+    }
+
+    .hero-company img {
+      border-radius: 5px;
+    }
+
+    .hero-company:hover {
+      text-decoration-thickness: 2px;
     }
 
     .company-line {
